@@ -1,0 +1,129 @@
+/* Universal selectors */
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: Poppins;
+  box-sizing: border-box;
+}
+
+/* navbar styling */
+.navbar {
+  position: fixed;
+  width: 100%;
+  padding: 30px 0;
+  transition: all 0.3s ease;
+}
+.navbar.sticky {
+  background: #86090f;
+  padding: 15px 0;
+}
+.navbar .logo a {
+  font-size: 35px;
+  font-weight: 600;
+  color: whitesmoke;
+}
+.navbar .logo a span {
+  color: #f89ba0;
+  transition: color 0.3s ease;
+}
+.navbar.sticky .logo a span {
+  color: whitesmoke;
+}
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
+}
+.navbar .menu > li > a {
+  color: whitesmoke;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  transition: color 0.3s ease;
+}
+.navbar .menu > li > a:hover {
+  color: #f89ba0;
+}
+.navbar.sticky .menu > li > a:hover {
+  color: whitesmoke;
+}
+.navbar .nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-links {
+  max-width: 90%;
+  padding: 0 80px;
+  margin: auto;
+}
+/* menu button styling */
+.menu-btn {
+  color: whitesmoke;
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
+}
+
+/* home section styling */
+
+.home {
+  display: flex;
+  height: 100vh;
+  background: url(../images/banner-image.png) no-repeat center;
+  background-size: cover;
+  color: whitesmoke;
+  min-height: 500px;
+}
+.home .nav-links {
+  margin: auto 0 auto 40px;
+}
+.home .home-content .text-1 {
+  font-size: 27px;
+}
+.home .home-content .text-2 {
+  font-size: 75px;
+  font-weight: bold;
+  margin-left: -3px;
+}
+.home .home-content .text-3 {
+  font-size: 40px;
+  margin: 5px 0;
+}
+.home .home-content .text-3 span {
+  color: #f89ba0;
+  font-weight: 700;
+}
+
+/* responsive media query start */
+@media (max-width: 947px) {
+  .nav-links {
+    padding: 0 50px;
+    margin: auto;
+  }
+  .navbar .menu {
+    position: fixed;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    top: 0;
+    text-align: center;
+    padding-top: 50px;
+  }
+  .navbar .menu.active {
+    left: 0%;
+  }
+  .navbar .menu li {
+    display: block;
+  }
+  .navbar .menu li a {
+    display: inline-block;
+    margin: 15px 0;
+    font-size: 25px;
+  }
+  .menu-btn {
+    display: block;
+    z-index: 999;
+  }
+}
