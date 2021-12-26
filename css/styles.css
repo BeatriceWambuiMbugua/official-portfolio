@@ -75,6 +75,7 @@
   background-size: cover;
   color: whitesmoke;
   min-height: 500px;
+  background-attachment: fixed;
 }
 .home .nav-links {
   margin: auto 0 auto 40px;
@@ -144,16 +145,17 @@ section .title::before {
   background: #111;
   transform: translate(-50%);
 }
-/* About section styling */
-.about .title::after {
-  content: " who am i";
-}
 .about .about-content,
-.services .services-content {
+.services .services-content,
+.skills .skills-content {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+}
+/* About section styling */
+.about .title::after {
+  content: " who am i";
 }
 
 .about .about-content .left {
@@ -247,6 +249,82 @@ section .title::before {
   font-weight: 500;
   margin: 10px 0 7px 0;
 }
+/* skills section styling */
+.skills .title::after {
+  content: " what i know";
+}
+.skills .skills-content .column {
+  width: calc(50% - 10px);
+}
+.skills .skills-content .left .text {
+  font-size: 23px;
+  font-weight: 600;
+  margin: 10px 0 7px 0;
+}
+.skills .skills-content .left a {
+  display: inline-block;
+  background: #86090f;
+  color: whitesmoke;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1.25px;
+  padding: 12px 36px;
+  margin-top: 20px;
+  border-radius: 25px;
+  border: 2px solid #86090f;
+  transition: all 0.3s ease;
+}
+.skills .skills-content .left a:hover {
+  color: #86090f;
+  font-weight: 500;
+  background: transparent;
+}
+.skills .skills-content .right .info {
+  display: flex;
+  margin-bottom: 5px;
+  align-items: center;
+  justify-content: space-between;
+}
+.skills .skills-content .right .bars {
+  margin-bottom: 15px;
+}
+.skills .skills-content .right span {
+  font-weight: 500;
+  font-size: 16px;
+}
+.skills .skills-content .right .line {
+  height: 5px;
+  width: 100%;
+  background: lightgrey;
+  position: relative;
+}
+.skills .skills-content .right .line::before {
+  background: #86090f;
+  content: "";
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+.skills-content .right .html::before {
+  width: 80%;
+}
+.skills-content .right .css::before {
+  width: 70%;
+}
+.skills-content .right .java::before {
+  width: 60%;
+}
+.skills-content .right .javascript::before {
+  width: 50%;
+}
+.skills-content .right .react::before {
+  width: 30%;
+}
+.skills .skills-content .left p {
+  text-align: justify;
+}
+
 /* responsive media query start */
 @media (max-width: 1300px) {
   .home .nav-links {
@@ -321,7 +399,8 @@ section .title::before {
   .about .about-content .right {
     flex: 100%;
   }
-  .services .services-content .card {
+  .services .services-content .card,
+  .skills .skills-content .column {
     width: calc(50% - 10px);
     margin-bottom: 20px;
   }
@@ -344,7 +423,8 @@ section .title::before {
     padding: 0 80px;
     margin: auto;
   }
-  .services .services-content .card {
+  .services .services-content .card,
+  .skills .skills-content .column {
     width: 100%;
   }
 }
