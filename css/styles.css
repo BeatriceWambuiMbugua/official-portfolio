@@ -202,11 +202,13 @@ section .title::before {
   background: transparent;
 }
 /* services section styling */
-.services {
+.services,
+.projects {
   background: #111;
   color: whitesmoke;
 }
-.services .title::before {
+.services .title::before,
+.projects .title::before {
   background: whitesmoke;
 }
 .services .title::after {
@@ -323,6 +325,24 @@ section .title::before {
 }
 .skills .skills-content .left p {
   text-align: justify;
+}
+/* projects styling section */
+.projects .title::after {
+  content: "what i create";
+  background: #111;
+  color: #f89ba0;
+}
+.projects .carousel .card img {
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
+  border-radius: 10%;
+  border: 5px solid #f89ba0;
+}
+.projects .carousel .card {
+  background: #222;
+  border-radius: 6px;
+  padding: 25px 35px;
 }
 
 /* responsive media query start */
