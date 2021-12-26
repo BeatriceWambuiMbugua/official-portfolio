@@ -338,13 +338,63 @@ section .title::before {
   object-fit: cover;
   border-radius: 10%;
   border: 5px solid #f89ba0;
+  transition: all 0.3s ease;
 }
 .projects .carousel .card {
   background: #222;
   border-radius: 6px;
   padding: 25px 35px;
+  text-align: center;
+  transition: all 0.3s ease;
 }
-
+.projects .carousel .card:hover {
+  background: #f89ba0;
+  color: #111;
+}
+.projects .carousel .card:hover img {
+  border: 5px solid #111;
+}
+.projects .carousel .card .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.projects .carousel .card:hover .box {
+  transform: scale(1.05);
+}
+.projects .carousel .card .text {
+  font-size: 23px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}
+.projects .carousel .card p {
+  line-height: 2em;
+  letter-spacing: 0.02em;
+}
+.owl-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+.owl-dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 5px;
+  outline: none !important;
+  border-radius: 50%;
+  border: 2px solid #f89ba0 !important;
+  transition: all 0.3s ease;
+}
+.owl-dot.active {
+  width: 35px;
+  border-radius: 14px;
+}
+.owl-dot.active,
+.owl-dot:hover {
+  background: #f89ba0 !important;
+}
 /* responsive media query start */
 @media (max-width: 1300px) {
   .home .nav-links {
@@ -423,6 +473,10 @@ section .title::before {
   .skills .skills-content .column {
     width: calc(50% - 10px);
     margin-bottom: 20px;
+  }
+  .projects .carousel .card img {
+    height: 150px;
+    width: 150px;
   }
 }
 @media (max-width: 690px) {
