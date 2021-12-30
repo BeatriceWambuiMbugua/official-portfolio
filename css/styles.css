@@ -6,6 +6,9 @@
   font-family: Poppins;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 /* navbar styling */
 .navbar {
@@ -36,6 +39,7 @@
   display: inline-block;
 }
 .navbar .menu > li > a {
+  display: block;
   color: whitesmoke;
   font-size: 18px;
   font-weight: 500;
@@ -64,6 +68,29 @@
   font-size: 23px;
   cursor: pointer;
   display: none;
+}
+.scroll-up-btn {
+  position: fixed;
+  height: 45px;
+  width: 42px;
+  background: #86090f;
+  right: 30px;
+  bottom: 30px;
+  text-align: center;
+  line-height: 45px;
+  color: whitesmoke;
+  z-index: 9999;
+  font-size: 30px;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.scroll-up-btn.show {
+  bottom: 30px;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* home section styling */
@@ -434,6 +461,81 @@ section .title::before {
 .contact .contact-content .row .info .sub-title {
   color: #706b6b;
 }
+.contact .right form .fields {
+  display: flex;
+}
+.contact .right form .fields,
+.contact .right form .fields .field {
+  height: 45px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.contact .right form .field input,
+.contact .right form .textarea textarea {
+  height: 100%;
+  width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 6px;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+}
+.contact .right form .name {
+  margin-right: 10px;
+}
+.contact .right form .email {
+  margin-left: 10px;
+}
+.contact .right form .subject {
+  margin-bottom: 10px;
+}
+.contact .right form .subject input {
+  padding: 15px;
+}
+.contact .right form .textarea textarea {
+  height: 80px;
+  padding-top: 10px;
+}
+.contact .right form .button {
+  height: 47px;
+  width: 170px;
+}
+.contact .right form .button button {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #86090f;
+  background: #86090f;
+  color: whitesmoke;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1.25px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.contact .right form .button button:hover {
+  color: #86090f;
+  font-weight: 500;
+  background: transparent;
+}
+
+/* footer section styling */
+footer {
+  background: #111;
+  padding: 20px 23px;
+  color: whitesmoke;
+  text-align: center;
+}
+footer span a {
+  color: #f89ba0;
+  text-decoration: none;
+}
+footer span a:hover {
+  text-decoration: underline;
+}
+footer .fa-heart-o {
+  color: #f89ba0;
+}
 
 /* responsive media query start */
 @media (max-width: 1300px) {
@@ -538,7 +640,8 @@ section .title::before {
     margin: auto;
   }
   .services .services-content .card,
-  .skills .skills-content .column {
+  .skills .skills-content .column,
+  .contact .contact-content .column {
     width: 100%;
   }
 }
