@@ -15,6 +15,8 @@ $(document).ready(function () {
   // slide up script if
   $(".scroll-up-btn").click(function () {
     $("html").animate({ scrollTop: 0 });
+    // removing smooth scroll on slide-up button click
+    $("html").css("scrollBehavior", "auto");
   });
 
   // typing animation script

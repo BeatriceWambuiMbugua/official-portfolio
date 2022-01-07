@@ -241,7 +241,7 @@ section .title::before {
 }
 .services .title::after {
   background: #111;
-  content: "what i provide";
+  content: "what i offer";
   color: #f89ba0;
 }
 .services .services-content .card {
@@ -591,12 +591,16 @@ footer .fa-heart-o {
   .menu-btn i.active:before {
     content: "\f00d";
   }
+  .home {
+    background-position: right -200px bottom 20px;
+  }
   .home .home-content .text-2 {
     font-size: 70px;
   }
   .home .home-content .text-3 {
     font-size: 35px;
   }
+
   .about .about-content .column {
     width: 100%;
   }
@@ -634,6 +638,9 @@ footer .fa-heart-o {
   .home .home-content .text-3 {
     font-size: 30px;
   }
+  .home {
+    background: #111;
+  }
   .nav-links {
     max-width: 100%;
     padding: 0 80px;
@@ -643,5 +650,30 @@ footer .fa-heart-o {
   .skills .skills-content .column,
   .contact .contact-content .column {
     width: 100%;
+  }
+  section .title::after {
+    background: #fff;
+    position: absolute;
+    font-size: 15px;
+    color: #86090f;
+    bottom: -16px;
+    left: 50%;
+    padding: 5px;
+    transform: translate(-50%);
+  }
+}
+@media (max-width: 375px) {
+  section .title::after {
+    background: #fff;
+    position: absolute;
+    font-size: 14px;
+    color: #86090f;
+    bottom: -14px;
+    left: 50%;
+    padding: 5px;
+    transform: translate(-50%);
+  }
+  .home {
+    background: #111;
   }
 }
