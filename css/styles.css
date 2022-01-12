@@ -1,3 +1,6 @@
+/* imports */
+@import url(//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css);
+@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
 /* Universal selectors */
 * {
   margin: 0;
@@ -535,6 +538,19 @@ footer span a:hover {
 }
 footer .fa-heart-o {
   color: #f89ba0;
+}
+
+/* thank you page styling */
+.thank-footer {
+  background: none;
+  color: #111;
+  margin-top: 50px;
+}
+.thank-footer .fa-heart-o {
+  color: #86090f;
+}
+.main-content i {
+  color: #86090f !important;
 }
 
 /* responsive media query start */
